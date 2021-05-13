@@ -1,9 +1,19 @@
+//dom elements
+var resultEl = document.getElementById("result");
+var lengthEl = document.getElementById("length");
+var uppercaseEl = document.getElementById("uppercase");
+var  lowercaseEl = document.getElementById("lowercase");
+var  numbersEl = document.getElementById("numbers");
+var generateEl = document.getElementById("generate");
+var clipboardEl = document.getElementById("clipboard");
+
+
 var randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
     number: getRandomNumber,
     symbol: getRandomSymbol
-}
+};
 
 //generate function
 funtion getRandomLower() {
