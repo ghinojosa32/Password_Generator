@@ -15,6 +15,16 @@ var randomFunc = {
     symbol: getRandomSymbol
 };
 
+generateEl.addEventListener("click", () => {
+    var length = +lengthEl.Value;
+    var hasLower = lowercaseEl.checked;
+    var hasUpper = uppercaseEl.checked;
+    var hasNumber = numbersEl.checked;
+    var hasSymbol = symbolsEL.checked;
+    
+    console.log(hasLower, hasUpper, hasNumber, hasSymbol);
+}
+
 //generate function
 funtion getRandomLower() {
     return String.fromCharCode(Math.floor(MAth.random() * 26) + 97);
