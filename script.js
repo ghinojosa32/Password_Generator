@@ -35,14 +35,22 @@ function generatePassword(lower, upper, symbol, length) {
   
     let generatePassword = "";
     var typesCount = lower + upper + numer + symbol;
-    console.log("typesCount: ", typesCount);
     var typesArr =[{ lower },{ upper },{ number},{ symbol }].filter
     (items => Object.values(item)[0]
     );
-    console.log("typesArr: ", typesArr);
     if(typesCount ===0) {
         return "";
     }
+    for(let i = 0; i < length; i += typesCount) {
+        typesArr.forEach(type => {
+          var funcName = Object.keys(type)[0];
+
+          generatedPassword += rendomFunc[funcName]();
+        });
+}
+    var finalPassword = generatedPassword.slice(0, length);
+   
+    return finalPassword;
 }
 
 
