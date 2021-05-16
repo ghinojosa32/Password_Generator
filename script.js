@@ -1,9 +1,9 @@
 // assignment code
 var generateBtn = document.querySelector("#generate");
 var password = 0;
-var lowerLetter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperLetter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var lowerLetter = ["a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z"];
+var upperLetter = ["A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z"];
+var numbers = ["0, 1, 2, 3, 4, 5, 6, 7, 8, 9"];
 var specialChar = ["!", '"',"#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", ";", ":", "[", "]", "{", "}", '|', "?", "<", ">", ",", ".", "~"];
 
 // writing the password to the password input
@@ -32,8 +32,8 @@ if (lowercase === true && upperCase === false && numberConfirm === false && spec
     var combo1 = lowerLetter.concat(upperLetter);
     generatePassword(combo1);
 } else if (lowercase === true && upperCase === false && numberConfirm === false && special === true)
-var combo2 = lowerLetter.concat(specialChar);
-generatePassword(combo2);
+    var combo2 = lowerLetter.concat(specialChar);
+    generatePassword(combo2);
 } else if (lowercase === true && upperCase === false && numberConfirm === true && special === false)
 var combo3 = lowerLetter.concat(numbers);
 generatePassword(combo3);
@@ -61,3 +61,21 @@ generatePassword(combo10);
 } else if (lowercase === false && upperCase === false && numberConfirm === true && special === true)
 var combo11 = numbers.concat(specialChar);
 generatePassword(combo11);
+
+
+// creating a function for the password 
+
+function generatePassword(combination) {
+    var generatePassword = [];
+     for(i = 0; i < passlength; i++){
+         var randomChar = combination[Math.floor(Math.random() * combination.length)];
+         generatePassword.push(randomChar);
+     }
+     password = generatePassword.join("");
+}
+var passwordText = document.querySelector("#password");
+}
+
+
+// generate button with event listener 
+generateBtn.addEventListener("click", writepassword);
