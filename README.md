@@ -1,7 +1,7 @@
 # Password_Generator
 This is a password generator using java/html/css
 
-
+link to application file:///C:/Users/gusbu/OneDrive/Desktop/My_portfolio/week%203/Password_Generator/index.html
 link to a screenshot of the website functioning  https://drive.google.com/file/d/170gB2TbMRWysS-IoHubVxgUg3tsFOMwQ/view
 
 // I started by creating variables for each category
