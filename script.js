@@ -61,7 +61,7 @@ generatePassword(combo10);
 } else if (lowercase === false && upperCase === false && numberConfirm === true && special === true){
 var combo11 = numbers.concat(specialChar);
 generatePassword(combo11);
-}
+};
 
 // creating a function for the password 
 
@@ -74,6 +74,7 @@ function generatePassword(combination) {
      password = generatePassword.join("");
 }
 var passwordText = document.querySelector("#password");
+passwordText.value = password;
 }
 
 
